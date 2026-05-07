@@ -277,7 +277,7 @@ ul {
 }
 
 .mobile-menu {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -354,7 +354,8 @@ ul {
     background: var(--red);
     border-radius: 50%;
     opacity: 0;
-    animation: float-particle 4s infinite
+    box-shadow: 0 0 8px var(--red);
+    animation: float-particle 4s infinite linear
 }
 
 @keyframes float-particle {
@@ -930,7 +931,13 @@ ul {
 
 .footer-brand .logo {
     color: var(--white);
-    margin-bottom: 16px
+    margin-bottom: 24px;
+    display: block
+}
+
+.footer-brand .logo img {
+    height: 100px;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.3));
 }
 
 .footer-brand p {
@@ -1535,6 +1542,10 @@ ul {
 
     .hamburger {
         display: flex
+    }
+
+    .header-inner .btn-primary {
+        display: none
     }
 
     .hero {
