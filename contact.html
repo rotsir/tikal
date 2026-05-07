@@ -1,268 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us — Tikal Electric</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Header -->
-<header class="header" id="header">
-    <div class="header-inner">
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Tikal Electric Logo">
-        </a>
-        <nav class="nav" id="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html" class="active">Contact</a>
-        </nav>
-        <a href="contact.html" class="btn btn-primary">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Tikal Electric Logo">
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">
+                <i class="fa-solid fa-bolt"></i> Get a Quote
+            </a>
+            <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:12px">
             <i class="fa-solid fa-bolt"></i> Get a Quote
         </a>
-        <div class="hamburger" id="hamburger" onclick="toggleMobile()">
-            <span></span><span></span><span></span>
-        </div>
     </div>
-</header>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn-primary" style="margin-top:12px">
-        <i class="fa-solid fa-bolt"></i> Get a Quote
-    </a>
-</div>
+    <!-- ==================== CONTACT PAGE ==================== -->
+    <div class="page active" id="page-contact">
 
-<!-- ==================== CONTACT PAGE ==================== -->
-<div class="page active" id="page-contact">
-
-    <section class="sub-hero">
-        <div class="sub-hero-content">
-            <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact Us</span></div>
-            <h1>Get in Touch</h1>
-            <p>Have a question or need an estimate? Reach out — we're here to help with all your electrical needs.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info-cards fade-up">
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <h3>Call Us</h3>
-                            <p>+1 786-532-0621</p>
-                            <p style="font-size:0.82rem;color:var(--gray-light);margin-top:2px">Available 24/7 for emergencies</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div>
-                            <h3>Email Us</h3>
-                            <p>Tiikalelectric@gmail.com</p>
-                            <p style="font-size:0.82rem;color:var(--gray-light);margin-top:2px">We respond within 24 hours</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h3>Visit Us</h3>
-                            <p>519 se 5th St, Miami, FL, United States, 33130</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-card">
-                        <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div>
-                            <h3>Business Hours</h3>
-                            <p>Monday – Friday: 7:00 AM – 6:00 PM<br>Saturday: 8:00 AM – 2:00 PM<br>Sunday: Emergency Only</p>
-                        </div>
-                    </div>
+        <section class="sub-hero">
+            <div class="sub-hero-content">
+                <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Contact Us</span>
                 </div>
-                <div class="contact-form fade-up" id="contactForm">
-                    <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:6px">Request an Estimate</h3>
-                    <p style="font-size:0.9rem;color:var(--gray);margin-bottom:28px">Fill out the form below and we'll get back to you promptly.</p>
-                    <form onsubmit="handleSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" placeholder="John Doe" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" placeholder="(555) 000-0000" required>
+                <h1>Get in Touch</h1>
+                <p>Have a question or need an estimate? Reach out — we're here to help with all your electrical needs.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info-cards fade-up">
+                        <div class="contact-info-card">
+                            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+1 786-532-0621</p>
+                                <p style="font-size:0.82rem;color:var(--gray-light);margin-top:2px">Available 24/7 for
+                                    emergencies</p>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" placeholder="john@example.com" required>
+                        <div class="contact-info-card">
+                            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>Tiikalelectric@gmail.com</p>
+                                <p style="font-size:0.82rem;color:var(--gray-light);margin-top:2px">We respond within 24
+                                    hours</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="service">Service Needed *</label>
-                            <select id="service" required>
-                                <option value="" disabled selected>Select a service...</option>
-                                <option value="residential">Residential Electrical</option>
-                                <option value="commercial">Commercial Wiring</option>
-                                <option value="lighting">Lighting Installation</option>
-                                <option value="repairs">Electrical Repairs</option>
-                                <option value="panel">Panel Upgrades</option>
-                                <option value="generator">Generator Installation</option>
-                                <option value="other">Other / Not Sure</option>
-                            </select>
+                        <div class="contact-info-card">
+                            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h3>Visit Us</h3>
+                                <p>519 se 5th St, Miami, FL, United States, 33130</p>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell us about your project or issue..."></textarea>
+                        <div class="contact-info-card">
+                            <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h3>Business Hours</h3>
+                                <p>Monday – Friday: 7:00 AM – 6:00 PM<br>Saturday: 8:00 AM – 2:00 PM<br>Sunday:
+                                    Emergency Only</p>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary form-submit"><i class="fa-solid fa-bolt"></i> Submit Request</button>
-                    </form>
+                    </div>
+                    <div class="contact-form fade-up" id="contactForm">
+                        <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:6px">Request an Estimate</h3>
+                        <p style="font-size:0.9rem;color:var(--gray);margin-bottom:28px">Fill out the form below and
+                            we'll get back to you promptly.</p>
+                        <form onsubmit="handleSubmit(event)">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name *</label>
+                                    <input type="text" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" placeholder="(555) 000-0000" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Needed *</label>
+                                <select id="service" required>
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="residential">Residential Electrical</option>
+                                    <option value="commercial">Commercial Wiring</option>
+                                    <option value="lighting">Lighting Installation</option>
+                                    <option value="repairs">Electrical Repairs</option>
+                                    <option value="panel">Panel Upgrades</option>
+                                    <option value="generator">Generator Installation</option>
+                                    <option value="other">Other / Not Sure</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Tell us about your project or issue..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit"><i class="fa-solid fa-bolt"></i>
+                                Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-light">
+            <div class="container">
+                <div class="section-header">
+                    <div class="overline">Our Service Area</div>
+                    <h2>We Serve Your Community</h2>
+                    <p>Tikal Electric proudly serves the greater metropolitan area and surrounding communities.</p>
+                </div>
+                <div class="map-section">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.8731232219275!2d-80.1344325!3d25.774753999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4f2e1e8f7ff%3A0x2c2c27f5ce00201c!2s607%205th%20St%2C%20Miami%20Beach%2C%20FL%2033139%2C%20USA!5e0!3m2!1sen!2s!4v1778136207188!5m2!1sen!2s"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Electrical Emergency?</h2>
+            <p>Don't wait — our 24/7 emergency line is always open. Call now for immediate assistance.</p>
+            <a href="tel:17865320621" class="btn btn-white"><i class="fa-solid fa-phone"></i> Call +1 786-532-0621</a>
+        </section>
+
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">Get a Quote</a>
+                </div>
+            </div>
+            <div>
+                <h4>Our Services</h4>
+                <div class="footer-links">
+                    <a href="residential-electrical.html">Residential Electrical</a>
+                    <a href="commercial-wiring.html">Commercial Wiring</a>
+                    <a href="lighting-installation.html">Lighting Installation</a>
+                    <a href="electrical-repairs.html">Electrical Repairs</a>
+                    <a href="panel-upgrades.html">Panel Upgrades</a>
+                    <a href="generator-installation.html">Generator Installation</a>
+                </div>
+            </div>
+            <div>
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                    <li><i class="fa-solid fa-phone"></i><span>+1 786-532-0621</span></li>
+                    <li><i class="fa-solid fa-envelope"></i><span>Tiikalelectric@gmail.com</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>519 se 5th St, Miami, FL, United States,
+                            33130</span></li>
+                    <li><i class="fa-solid fa-clock"></i><span>Mon–Fri: 7 AM – 6 PM<br>Sat: 8 AM – 2 PM<br>Sun:
+                            Emergency Only</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/people/Tikal-Electric/61575265457797/#" target="_blank"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/tikal_electric/" target="_blank" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Tikal Electric. All rights reserved. | Licensed & Insured Electrical Contractor</p>
+        </div>
+    </footer>
 
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header">
-                <div class="overline">Our Service Area</div>
-                <h2>We Serve Your Community</h2>
-                <p>Tikal Electric proudly serves the greater metropolitan area and surrounding communities.</p>
-            </div>
-            <div class="map-section">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.8731232219275!2d-80.1344325!3d25.774753999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4f2e1e8f7ff%3A0x2c2c27f5ce00201c!2s607%205th%20St%2C%20Miami%20Beach%2C%20FL%2033139%2C%20USA!5e0!3m2!1sen!2s!4v1778136207188!5m2!1sen!2s" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>Electrical Emergency?</h2>
-        <p>Don't wait — our 24/7 emergency line is always open. Call now for immediate assistance.</p>
-        <a href="tel:17865320621" class="btn btn-white"><i class="fa-solid fa-phone"></i> Call +1 786-532-0621</a>
-    </section>
-
-</div>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="footer" id="footer">
-    <div class="footer-grid">
-        <div>
-            <h4>Quick Links</h4>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-                <a href="contact.html">Get a Quote</a>
-            </div>
-        </div>
-        <div>
-            <h4>Our Services</h4>
-            <div class="footer-links">
-                <a href="residential-electrical.html">Residential Electrical</a>
-                <a href="commercial-wiring.html">Commercial Wiring</a>
-                <a href="lighting-installation.html">Lighting Installation</a>
-                <a href="electrical-repairs.html">Electrical Repairs</a>
-                <a href="panel-upgrades.html">Panel Upgrades</a>
-                <a href="generator-installation.html">Generator Installation</a>
-            </div>
-        </div>
-        <div>
-            <h4>Contact Info</h4>
-            <ul class="footer-contact">
-                <li><i class="fa-solid fa-phone"></i><span>+1 786-532-0621</span></li>
-                <li><i class="fa-solid fa-envelope"></i><span>Tiikalelectric@gmail.com</span></li>
-                <li><i class="fa-solid fa-location-dot"></i><span>519 se 5th St, Miami, FL, United States, 33130</span></li>
-                <li><i class="fa-solid fa-clock"></i><span>Mon–Fri: 7 AM – 6 PM<br>Sat: 8 AM – 2 PM<br>Sun: Emergency Only</span></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Follow Us</h4>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/people/Tikal-Electric/61575265457797/#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/tikal_electric/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
-            </div>
-        </div>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMsg">Message sent successfully!</span>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Tikal Electric. All rights reserved. | Licensed & Insured Electrical Contractor</p>
-    </div>
-</footer>
 
-<!-- Toast Notification -->
-<div class="toast" id="toast">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toastMsg">Message sent successfully!</span>
-</div>
+    <script>
+        // Mobile menu
+        function toggleMobile() {
+            document.getElementById('hamburger').classList.toggle('active');
+            document.getElementById('mobileMenu').classList.toggle('open');
+            document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+        }
 
-<script>
-// Mobile menu
-function toggleMobile() {
-  document.getElementById('hamburger').classList.toggle('active');
-  document.getElementById('mobileMenu').classList.toggle('open');
-  document.body.style.overflow = document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
-}
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+        });
 
-// Header scroll effect
-window.addEventListener('scroll', () => {
-  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
-});
+        // Scroll animations
+        function initAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.fade-up:not(.visible)').forEach(el => observer.observe(el));
+        }
 
-// Scroll animations
-function initAnimations() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => observer.observe(el));
-}
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
 
-// Form submission
-function handleSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value.trim();
+            if (!name || !phone || !email || !service) {
+                showToast('Please fill in all required fields.', false);
+                return;
+            }
 
-  if (!name || !phone || !email || !service) {
-    showToast('Please fill in all required fields.', false);
-    return;
-  }
+            showToast('Thank you, ' + name + '! Your request has been submitted. We\'ll contact you shortly.');
+            e.target.reset();
+        }
 
-  showToast('Thank you, ' + name + '! Your request has been submitted. We\'ll contact you shortly.');
-  e.target.reset();
-}
+        // Toast
+        function showToast(msg, success = true) {
+            const toast = document.getElementById('toast');
+            const icon = toast.querySelector('i');
+            document.getElementById('toastMsg').textContent = msg;
+            icon.className = success ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-exclamation';
+            icon.style.color = success ? 'var(--red)' : '#f59e0b';
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 4000);
+        }
 
-// Toast
-function showToast(msg, success = true) {
-  const toast = document.getElementById('toast');
-  const icon = toast.querySelector('i');
-  document.getElementById('toastMsg').textContent = msg;
-  icon.className = success ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-exclamation';
-  icon.style.color = success ? 'var(--red)' : '#f59e0b';
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
-}
-
-// Init
-document.addEventListener('DOMContentLoaded', () => {
-  initAnimations();
-});
-</script>
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            initAnimations();
+        });
+    </script>
 </body>
+
 </html>
